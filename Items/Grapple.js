@@ -75,7 +75,7 @@ game.on("projectileHit", (e) => {
 });
 
 // Admin item distributor command
-game.commands.register("grapplebow", { permission: "admin" }, (sender, args) => {
+game.commands.register("grapplebow", { permission: "player" }, (sender, args) => {
   const p = game.getPlayer(sender.name);
   if (p) {
     p.give("bow", 1);
